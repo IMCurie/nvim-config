@@ -1,0 +1,55 @@
+return {
+  "rebelot/kanagawa.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {
+    transparent = true,
+    overrides = function(colors)
+      local theme = colors.theme
+      return {
+        NormalFloat = { bg = "none" },
+        FloatBorder = { bg = "none", fg = theme.ui.fg_border },
+        DiagnosticFloat = { bg = theme.ui.bg_p1, fg = theme.ui.fg_dim },
+        DiagnosticFloatBorder = { bg = theme.ui.bg_p1, fg = theme.ui.fg_border },
+        DiagnosticFloatingError = { fg = theme.diag.error, bg = theme.ui.bg_p1 },
+        DiagnosticFloatingWarn = { fg = theme.diag.warning, bg = theme.ui.bg_p1 },
+        DiagnosticFloatingInfo = { fg = theme.diag.info, bg = theme.ui.bg_p1 },
+        DiagnosticFloatingHint = { fg = theme.diag.hint, bg = theme.ui.bg_p1 },
+        DiagnosticFloatingOk = { fg = theme.diag.ok, bg = theme.ui.bg_p1 },
+        LineNr = { bg = "none" },
+        CursorLineNr = { bg = "none" },
+        LineNrAbove = { bg = "none" },
+        LineNrBelow = { bg = "none" },
+        SignColumn = { bg = "none" },
+        FoldColumn = { bg = "none" },
+        GitSignsAdd = { bg = "none" },
+        GitSignsChange = { bg = "none" },
+        GitSignsDelete = { bg = "none" },
+        GitSignsAddNr = { bg = "none" },
+        GitSignsChangeNr = { bg = "none" },
+        GitSignsDeleteNr = { bg = "none" },
+        GitSignsAddLn = { bg = "none" },
+        GitSignsChangeLn = { bg = "none" },
+        GitSignsDeleteLn = { bg = "none" },
+        Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
+        PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+        PmenuSbar = { bg = theme.ui.bg_m1 },
+        PmenuThumb = { bg = theme.ui.bg_p2 },
+        BlinkCmpMenu = { link = "Pmenu" },
+        BlinkCmpMenuBorder = { bg = theme.ui.bg_p1, fg = theme.ui.fg_border },
+        TelescopeNormal = { bg = "none" },
+        TelescopeBorder = { bg = "none", fg = theme.ui.fg_border },
+        TelescopePromptNormal = { bg = "none" },
+        TelescopePromptBorder = { bg = "none", fg = theme.ui.fg_border },
+        TelescopeResultsNormal = { bg = "none" },
+        TelescopeResultsBorder = { bg = "none", fg = theme.ui.fg_border },
+        TelescopePreviewNormal = { bg = "none" },
+        TelescopePreviewBorder = { bg = "none", fg = theme.ui.fg_border },
+      }
+    end,
+  },
+  config = function(_, opts)
+    require("kanagawa").setup(opts)
+    vim.cmd.colorscheme("kanagawa-dragon")
+  end,
+}
