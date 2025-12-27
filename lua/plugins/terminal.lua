@@ -3,6 +3,7 @@ return {
   version = "*",
   opts = {
     open_mapping = [[<C-\>]],
-    direction = "horizontal",
+    direction = "vertical",
+    size = 60,
   }
 }
