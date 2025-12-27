@@ -5,5 +5,5 @@ return {
     open_mapping = [[<C-\>]],
     direction = "vertical",
     size = 60,
-  }
+  },
 }

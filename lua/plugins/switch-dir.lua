@@ -1,17 +1,17 @@
 return {
   {
-    'nvim-telescope/telescope-project.nvim',
-    dependencies = { 'nvim-telescope/telescope.nvim' },
+    "nvim-telescope/telescope-project.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
-      require('telescope').load_extension('project')
+      require("telescope").load_extension("project")
     end,
     keys = {
       {
-        '<leader>pp',
+        "<leader>pp",
         function()
-          require('telescope').extensions.project.project({})
+          require("telescope").extensions.project.project({})
         end,
-        desc = 'Switch project',
+        desc = "Switch project",
       },
     },
   },
