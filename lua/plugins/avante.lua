@@ -4,7 +4,7 @@ return {
   event = "VeryLazy",
   version = false,
   ---@module 'avante'
-  ---@type
+  ---@type avante.Config
   opts = {
     mode = "agentic",
     instructions_file = "avante.md",
