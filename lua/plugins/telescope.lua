@@ -12,7 +12,7 @@ return {
   end,
   keys = {
     {
-      "<C-b>",
+      "<C-\\>",
       function()
         local builtin = require("telescope.builtin")
         local ok, err = pcall(builtin.buffers)
