@@ -19,21 +19,21 @@ return {
     formatters_by_ft = {
       c = { "clang_format" },
       cpp = { "clang_format" },
-      python = { "black", "isort" },
+      python = { "isort", "black" },
       lua = { "stylua" },
       rust = { "rustfmt" },
       go = { "gofmt" },
 
-      typescript = { "prettierd", "prettier" },
-      javascript = { "prettierd", "prettier" },
-      typescriptreact = { "prettierd", "prettier" },
-      javascriptreact = { "prettierd", "prettier" },
+      typescript = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { "prettierd", "prettier", stop_after_first = true },
+      typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+      javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 
-      html = { "prettierd", "prettier" },
-      css = { "prettierd", "prettier" },
-      scss = { "prettierd", "prettier" },
-      json = { "prettierd", "prettier" },
-      yaml = { "prettierd", "prettier" },
+      html = { "prettierd", "prettier", stop_after_first = true },
+      css = { "prettierd", "prettier", stop_after_first = true },
+      scss = { "prettierd", "prettier", stop_after_first = true },
+      json = { "prettierd", "prettier", stop_after_first = true },
+      yaml = { "prettierd", "prettier", stop_after_first = true },
     },
 
     format_on_save = {

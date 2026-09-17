@@ -9,10 +9,6 @@ vim.lsp.enable({
   "cssls",
   "tailwindcss",
   "eslint",
-
-  rust_analyzer = {
-    cmd = { "rustup", "run", "nightly", "rust-analyzer" },
-  },
 })
 
 vim.diagnostic.config({
@@ -54,10 +50,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.diagnostic.open_float()
     end, opts)
     vim.keymap.set("n", "[d", function()
-      vim.diagnostic.goto_next()
+      vim.diagnostic.jump({ count = -1 })
     end, opts)
     vim.keymap.set("n", "]d", function()
-      vim.diagnostic.goto_prev()
+      vim.diagnostic.jump({ count = 1 })
     end, opts)
     vim.keymap.set("n", "<leader>vca", function()
       vim.lsp.buf.code_action()
